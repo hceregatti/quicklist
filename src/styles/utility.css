@@ -12,6 +12,10 @@
   display: flex;
 }
 
+.warning-message {
+  display: none;
+}
+
 @media (width >= 80rem) {
   .container {
     --max-width: 85.375rem;
