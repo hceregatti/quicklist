@@ -26,6 +26,13 @@ item.addEventListener("click", (e) => {
 form.onsubmit = (e) => {
   e.preventDefault();
 
+  const value = input.value.trim();
+
+  if(value === "") {
+    alert("Por favor, digite um item antes de adicionar.")
+    return;
+  }
+
   addItem();
   input.value = "";
 };
