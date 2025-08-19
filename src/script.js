@@ -20,6 +20,13 @@ item.addEventListener("click", (e) => {
 
   if (target.classList.contains("trash")) {
     li.remove();
+
+    const warningMsg = document.querySelector(".warning-message");
+    warningMsg.classList.toggle("warning-message");
+
+    setTimeout(() => {
+      warningMsg.classList.toggle("warning-message");
+    }, 2000);
   }
 });
 
