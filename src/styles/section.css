@@ -1,0 +1,26 @@
+#app {
+  margin-top: 2.125rem;
+  & .header-app{
+    display: grid;
+    gap: 1rem;
+    & span {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      & .back {
+        width: .6875rem;
+        height: auto;
+      }
+      & p {
+        font: var(--link);
+        color: var(--color-brand);
+      }
+    }
+
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+  }
+}

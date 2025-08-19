@@ -1,0 +1,141 @@
+#form {
+  margin-top: 2.75rem;
+
+  & .input-wrapper {
+    display: grid;
+    gap: 1rem;
+
+    & input {
+      height: 2.75rem;
+      border: 2px solid var(--border-primary);
+      border-radius: 0.75rem;
+      background-color: var(--bg-secondary);
+      padding: 0.6875rem 1.125rem;
+      font: 400 1rem/1.4 var(--ff-sans);
+      color: var(--content-primary);
+
+      &:hover {
+        border: 2px solid var(--border-hover);
+      }
+
+      &:focus {
+        border: 1px solid var(--color-brand);
+        outline: 1.5px solid var(--color-brand);
+      }
+    }
+
+    & button {
+      background-color: var(--color-brand);
+      border-radius: 0.75rem;
+      border: none;
+
+      font: 500 1rem/1.25 var(--ff-sans);
+      color: var(--always-white);
+
+      padding: 0.75rem 6.6875rem;
+
+      &:hover {
+        background-color: var(--color-brand-hover);
+      }
+    }
+  }
+
+  & ul {
+    display: grid;
+    gap: .75rem;
+
+    margin-top: 2.5rem;
+
+    & .item-list {
+      background-color: var(--bg-secondary);
+      height: 3.5625rem;
+      border: none;
+      border-radius: .75rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      & span.checkbox {
+        padding-inline: .75rem;
+      }
+
+      & p {
+        font: var(--paragraph);
+        color: var(--content-primary);
+      }
+
+      & span.trash {
+        position: absolute;
+        right: 0;
+        padding-inline: 1.25rem;
+
+        & svg {
+          width: 1rem;
+          height: 1rem;
+
+          & path {
+            stroke: #6B6671;
+          }
+        }
+      }
+
+    }
+  }
+
+  & .danger {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-danger);
+    padding: .75rem;
+    border-radius: .75rem;
+    position: relative;
+    margin-top: 2.25rem;
+
+    & .warning {
+      padding-inline: .5rem;
+
+      & svg {
+        width: 1.25rem;
+        height: 1.25rem;
+
+        & path {
+          fill: var(--always-white);
+        }
+      }
+    }
+
+    & p {
+      font: var(--label);
+      color: var(--always-white);
+    }
+
+    & .delete {
+      position: absolute;
+      right: 0;
+      padding-inline: .75rem;
+
+      & svg {
+        width: 1.25rem;
+        height: 1.25rem;
+
+        & path {
+          fill: var(--always-white);
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80rem) {
+  #form {
+    & .input-wrapper {
+      display: flex;
+
+      & button {
+        white-space: nowrap;
+        font: var(--label);
+        padding: 0.75rem 1.25rem;
+      }
+    }
+  }
+}
