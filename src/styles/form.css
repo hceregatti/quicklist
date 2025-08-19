@@ -55,19 +55,47 @@
       align-items: center;
       position: relative;
 
-      & span.checkbox {
+      & a.checkbox {
+        padding-inline: .75rem;
+        position: relative;
+        cursor: pointer;
+      }
+
+      & a.checkbox:hover::before{
+        content: url(/assets/icons/checkbox-hover.svg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         padding-inline: .75rem;
       }
 
-      & p {
+      & a.checkbox::after {
+        content: url(/assets/icons/checkbox-checked.svg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-inline: .75rem;
+        display: none;
+      }
+      
+      & a.show::after {
+        display: block;
+      }
+
+      & p.item-name {
         font: var(--paragraph);
         color: var(--content-primary);
       }
 
-      & span.trash {
+      & a.trash {
         position: absolute;
         right: 0;
         padding-inline: 1.25rem;
+        cursor: pointer;
 
         & svg {
           width: 1rem;
@@ -81,7 +109,7 @@
 
     }
   }
-
+  
   & .danger {
     display: flex;
     align-items: center;
