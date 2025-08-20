@@ -91,9 +91,6 @@ function addItem() {
 
   itemName.textContent = input.value;
 
-  newItem.append(itemCheckbox);
-  newItem.append(itemName);
-  newItem.append(trash);
-
+  newItem.append(itemCheckbox, itemName, trash);
   item.prepend(newItem);
 }
