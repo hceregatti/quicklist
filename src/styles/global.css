@@ -48,6 +48,25 @@ a {
   color: inherit;
 }
 
+ul::-webkit-scrollbar {
+  width: .5rem;
+}
+
+ul::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-hover);
+  border-radius: .5rem;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: var(--color-brand);
+  border-radius: .5rem;
+}
+
+ul::-webkit-scrollbar-thumb:hover{
+  background: var(--color-brand-hover);
+}
+
 ul li {
   list-style: none;
 }
